@@ -1,0 +1,62 @@
+# Cricket shot taxonomy — 8 coarse classes.
+# Each class groups multiple shot variants that share the same pose signature.
+# Folder names under data/clips/ and data/raw_videos/ must match `name` exactly.
+#
+# We can split classes later (e.g. drive -> cover/straight/on/off) once
+# v1 is working and we have enough data per finer class.
+
+classes:
+  - id: 0
+    name: drive
+    description: Front-foot, vertical bat, full follow-through swung straight through the line.
+    variants: [cover_drive, straight_drive, on_drive, off_drive, square_drive, lofted_drive]
+
+  - id: 1
+    name: cut
+    description: Back-foot, horizontal bat, played to the off side (toward point/third).
+    variants: [square_cut, late_cut, upper_cut]
+
+  - id: 2
+    name: pull_hook
+    description: Back-foot, horizontal bat to a short ball, played to leg side.
+    variants: [pull, hook]
+
+  - id: 3
+    name: sweep
+    description: Front knee on ground, horizontal bat, played to leg side (usually vs spin).
+    variants: [sweep, reverse_sweep, slog_sweep, paddle_sweep, switch_hit]
+
+  - id: 4
+    name: defensive
+    description: Vertical bat block with no follow-through; ball drops near the feet.
+    variants: [forward_defensive, back_defensive, leave]
+
+  - id: 5
+    name: glance
+    description: Wristy deflection off the pads to fine leg; ball glides rather than power.
+    variants: [leg_glance]
+
+  - id: 6
+    name: innovative
+    description: Modern unorthodox shots — ramp/scoop, dilscoop, helicopter, lap, etc.
+    variants: [ramp, scoop, dilscoop, helicopter, lap]
+
+  - id: 7
+    name: other
+    description: Mishits, edges, anything that doesn't fit a recognisable shot type.
+    variants: []
+
+# Labeling rules
+clip_spec:
+  duration_seconds: 2.0           # total clip length at training time
+  pre_contact_seconds: 1.2        # time before bat-ball contact
+  post_contact_seconds: 0.8       # time after contact
+  fps: 25                          # resample target
+  min_visible_fraction: 0.6       # batsman must be visible for >=60% of the clip
+
+# Handedness is handled automatically in step 5 (extract_poses.py).
+# Left-handers are detected from stance and mirrored to canonical right-hand frame.
+camera_view:
+  preferred: straight              # behind-the-bowler camera
+  acceptable: [side_on]
+  reject: [close_up, replay_slow_mo, crowd, scoreboard]

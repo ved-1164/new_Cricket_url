@@ -1,0 +1,11 @@
+innovative/innovative_o83vJITr0_s010_28s.npy	0
+innovative/innovative_o83vJITr0_s017_39s.npy	0
+innovative/innovative_o83vJITr0_s002_5s.npy	0
+innovative/innovative_o83vJITr0_s016_37s.npy	0
+innovative/innovative_o83vJITr0_s028_73s.npy	0
+innovative/innovative_o83vJITr0_s024_58s.npy	0
+innovative/innovative_o83vJITr0_s026_66s.npy	0
+innovative/innovative_o83vJITr0_s003_8s.npy	0
+innovative/innovative_o83vJITr0_s013_33s.npy	0
+innovative/innovative_o83vJITr0_s014_34s.npy	0
+innovative/innovative_o83vJITr0_s011_30s.npy	0

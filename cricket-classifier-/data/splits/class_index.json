@@ -1,0 +1,9 @@
+{
+  "drive": 0,
+  "cut": 1,
+  "pull_hook": 2,
+  "sweep": 3,
+  "defensive": 4,
+  "glance": 5,
+  "innovative": 6
+}

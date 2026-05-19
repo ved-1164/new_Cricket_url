@@ -1,0 +1,3 @@
+innovative/innovative_o83vJITr0_s000_0s.npy	0
+innovative/innovative_o83vJITr0_s005_13s.npy	0
+innovative/innovative_o83vJITr0_s019_45s.npy	0
